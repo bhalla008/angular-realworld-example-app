@@ -28,7 +28,9 @@ pipeline{
     
     stage ('deploy'){
       steps{
-         sh 'npm start --host 0.0.0.0'
+         sh 'npm start'
+         sh  'lt --port 3000'
+        
           }
     } 
     }
