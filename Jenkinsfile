@@ -28,8 +28,11 @@ pipeline{
     
     stage ('deploy'){
       steps{
-         sh 'npm start'
-         sh  'lt --port 3000'
+         echo "Starting deploying ...."
+    sh '''#!/bin/bash
+          ng serve --host 0.0.0.0
+     '''
+    println "deploy Success.."
         
           }
     } 
