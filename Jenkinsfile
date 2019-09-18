@@ -14,6 +14,12 @@ pipeline{
         sh  'npm install --verbose -d'
       } 
 	  }
+    stage('yarn install') {
+    steps{
+        sh 'npm install -g yarn'
+        sh 'yarn install'
+    }
+    }
     stage ('build'){
       steps{
          sh 'npm run build'
@@ -22,7 +28,7 @@ pipeline{
     
     stage ('deploy'){
       steps{
-         sh 'pm2 restart all'
+         sh 'npm start'
           }
     } 
     }
