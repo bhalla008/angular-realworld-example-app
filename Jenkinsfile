@@ -12,9 +12,9 @@ pipeline{
         sh  'npm install --verbose -d'
       } 
 	  }
-    stage ('test'){
+    stage ('build'){
       steps{
-         sh 'npm test'
+         sh 'npm run build'
           }
     } 
     }
