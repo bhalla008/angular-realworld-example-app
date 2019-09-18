@@ -1,6 +1,6 @@
 pipeline{
   agent any
-  
+  tools {nodejs "node"}
   stages{
     stage ('checkout'){
       steps{
@@ -14,7 +14,7 @@ pipeline{
 	  }
     stage ('test'){
       steps{
-         sh 'npm -vesrion'
+         sh 'npm test'
           }
     } 
     }
