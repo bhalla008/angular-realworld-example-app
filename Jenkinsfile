@@ -9,12 +9,12 @@ pipeline{
     }
     stage ('install modules'){
       steps{
-        sh  npm install --verbose -d
+        sh  'npm install --verbose -d'
       } 
 	  }
     stage ('test'){
       steps{
-         sh npm -vesrion
+         sh 'npm -vesrion'
           }
     } 
     }
