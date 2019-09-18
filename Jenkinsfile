@@ -30,7 +30,7 @@ pipeline{
       steps{
          echo "Starting deploying ...."
     sh '''#!/bin/bash
-          ng serve --host 0.0.0.0
+          forever start node_modules/@angular/cli/bin/ng serve --host 0.0.0.0
      '''
     println "deploy Success.."
         
