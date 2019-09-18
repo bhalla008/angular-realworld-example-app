@@ -9,6 +9,8 @@ pipeline{
     }
     stage ('install modules'){
       steps{
+        
+        sh   'npm install -g @angular/cli'
         sh  'npm install --verbose -d'
       } 
 	  }
