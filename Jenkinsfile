@@ -20,7 +20,7 @@ pipeline{
     
     stage ('deploy'){
       steps{
-         sh 'ng serve --host 0.0.0.0'
+         sh 'npm start --host 0.0.0.0'
           }
     } 
     }
