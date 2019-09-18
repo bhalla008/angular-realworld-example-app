@@ -30,7 +30,7 @@ pipeline{
       steps{
          echo "Starting deploying ...."
     sh '''#!/bin/bash
-          pm2 start "ng serve --host 0.0.0.0'
+          pm2 start "ng serve --host 0.0.0.0"
      '''
     println "deploy Success.."
         
